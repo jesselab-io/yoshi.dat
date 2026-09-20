@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b08"><title>YOSHI.DAT — The last save</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header><a class="brand" href="./">YOSHI<span>.DAT</span></a><span class="build">RECOVERED BUILD / 1996.08.23</span><button id="sound" aria-pressed="true">SOUND ON</button></header>
+    <div class="game-shell">
+      <canvas id="game" aria-label="Play as Mario in a haunted maze. Throw your boomerang cap to stun Yoshi." tabindex="0"></canvas>
+      <div class="scanlines"></div><div class="vignette"></div>
+      <div id="hud" class="hidden"><div class="hud-top"><span><i></i> MARIO / LIVE FEED</span><span id="eggs">MEMORY EGGS 00 / 05</span></div><div class="gear"><span class="mario-badge">M</span><div><b>MARIO</b><span id="cap-status">CAP READY · SPACE / CLICK</span></div></div><div id="danger" aria-live="polite"></div><div class="crosshair">+</div><div class="hud-bottom"><span id="objective">FIND THE FIVE MEMORY EGGS</span><span id="battery">FLASHLIGHT 100%</span></div><div id="hint"></div></div>
+      <section id="menu" class="overlay">
+        <div class="eyebrow"><span class="dot"></span> AN UNRECOGNIZED SAVE FILE</div>
+        <h1>YOSHI<span class="title-dot">.</span><span class="dat">DAT</span></h1>
+        <p class="subtitle">Mario, he remembers you.<br>He brought corrupted friends. Keep your cap ready.</p>
+        <div class="file-info"><span>FILE STATUS</span><b>CORRUPTED</b><span>LAST PLAYER</span><b>MARIO</b></div>
+        <button id="start" class="primary">LOAD SAVE FILE <span>↗</span></button>
+        <p class="warning">Contains sudden scares and unsettling audio.<br>Flashing lights are optional.</p>
+        <label class="flash-setting"><input id="flashes" type="checkbox"> ENABLE FLASHING LIGHTS</label>
+        <div class="menu-bottom"><span>01 — THE FORGOTTEN GARDEN</span><span>DO NOT LOOK BACK.</span></div>
+      </section>
+      <section id="pause" class="overlay centered hidden"><div class="eyebrow">SIGNAL INTERRUPTED</div><h2>STILL HERE.</h2><p>The garden waits for you.</p><button id="resume" class="primary">RESUME FILE ↗</button><button id="quit" class="text-button">RETURN TO TITLE</button></section>
+      <section id="ending" class="overlay centered hidden"><div id="end-label" class="eyebrow">SAVE FILE LOST</div><h2 id="end-title">FOUND YOU.</h2><p id="end-copy">Some memories should stay forgotten.</p><button id="restart" class="primary">TRY AGAIN ↗</button><button id="end-menu" class="text-button">RETURN TO TITLE</button></section>
+      <div id="mobile" class="hidden"><div class="move-pad"><button data-key="w" aria-label="Move forward">↑</button><button data-key="a" aria-label="Strafe left">←</button><button data-key="s" aria-label="Move backward">↓</button><button data-key="d" aria-label="Strafe right">→</button></div><div class="turn-pad"><button data-key="ArrowLeft" aria-label="Turn left">↶</button><button data-key="ArrowRight" aria-label="Turn right">↷</button><button id="touch-cap" aria-label="Throw boomerang cap">M↗</button><button id="touch-light" aria-label="Toggle flashlight">☼</button><button id="touch-pause" aria-label="Pause game">Ⅱ</button></div></div>
+    </div>
+    <footer><span><b>W A S D</b> MOVE</span><span><b>MOUSE / ← →</b> LOOK</span><span><b>SHIFT</b> RUN</span><span><b>SPACE / CLICK</b> THROW CAP</span><span><b>F</b> FLASHLIGHT</span><span><b>ESC</b> PAUSE</span><span class="footer-right">A LITTLE NOSTALGIA. A LITTLE NIGHTMARE.</span></footer>
+  </main><script src="game.js"></script>
+</body>
+</html>
